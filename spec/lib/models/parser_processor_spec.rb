@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'models/parser_processor'
 
-describe LogParser::ParserController do
+describe LogParser::ParserProcessor do
   let(:parser_mock) do
     # Parser object should has parse method
     parsed_file = double(parse: :parsed_file)
@@ -20,7 +20,7 @@ describe LogParser::ParserController do
     double(new: logger)
   end
 
-  subject { LogParser::ParserController.new(parser: parser_mock, handler: handler_mock, logger: logger_mock) }
+  subject { LogParser::ParserProcessor.new(parser: parser_mock, handler: handler_mock, logger: logger_mock) }
 
   it 'processes webserver log' do
     expect(subject.process_log_file).to eq(:expected_result)
