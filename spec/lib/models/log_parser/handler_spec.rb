@@ -1,5 +1,3 @@
-# Handler maps parsed data and returns a hash {most_viewed: [data], unique_viewed: [data]}
-
 require 'spec_helper'
 require 'models/log_parser/handler'
 require 'context/error_handler_content'

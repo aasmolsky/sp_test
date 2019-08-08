@@ -1,5 +1,3 @@
-# Parser picks up the log file and returns parsed data as array [[page, ip], ...]
-
 require 'spec_helper'
 require 'models/log_parser/parser'
 require 'context/error_handler_content'

@@ -1,5 +1,3 @@
-# Logger gets data from Handler and returns result into console
-
 require 'spec_helper'
 require 'models/log_parser/logger'
 require 'context/error_handler_content'

@@ -1,7 +1,3 @@
-# Module contains methods for errors handling.
-# 4 types of errors are available:
-# invalid_file_name_error, data_format_error, arguments_error, unexpected_error.
-
 require 'spec_helper'
 require 'modules/error_handler_module'
 require 'context/error_handler_content'
