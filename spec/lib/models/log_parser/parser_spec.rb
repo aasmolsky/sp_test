@@ -37,5 +37,13 @@ describe LogParser::Parser do
         expect { subject.parse }.to raise_error(RuntimeError, arguments_error)
       end
     end
+
+    context 'when log file is not found' do
+      let(:argv) { %w[nonexistent.log] }
+
+      it 'raises data from log file' do
+        expect { subject.parse }.to raise_error(RuntimeError, file_not_found_error)
+      end
+    end
   end
 end

@@ -10,6 +10,7 @@ module ErrorHandlerModule
   end
 
   AVAILABLE_ERRORS = {
+    file_not_found: 'Log file was not found. Please put webserver.log file into the Root dir.',
     invalid_file_name: 'Incorrect name received. Provide valid log file name please.',
     incorrect_data_format: 'Incorrect data received. Please contact your Administrator.',
     unexpected_arguments: 'The script allows only log file name as its parameter. Please try again.',
