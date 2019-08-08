@@ -1,5 +1,3 @@
-# Parser controller performs 3 main tasks: Parse log file, Handle file data, Console log result.
-
 require 'spec_helper'
 require 'models/parser_processor'
 
