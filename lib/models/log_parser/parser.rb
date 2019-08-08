@@ -24,7 +24,13 @@ module LogParser
     end
 
     def read_file(name)
-      File.read("#{ENV['SPEC_FILE_DIR'] || Dir.pwd}/#{name}")
+      path = "#{ENV['SPEC_FILE_DIR'] || Dir.pwd}/#{name}"
+
+      if File.exist?(path) && File.readable?(path)
+        File.read(path)
+      else
+        raise_error(:file_not_found)
+      end
     end
 
     def parse_file(data)
