@@ -6,7 +6,7 @@ module LogParser
 
     attr_reader :parsed_data, :mapped_data
 
-    def initialize(parsed_file: file_data)
+    def initialize(parsed_file: {})
       @parsed_data = parsed_file
       @mapped_data = {}
     end

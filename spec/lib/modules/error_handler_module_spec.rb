@@ -7,6 +7,7 @@ describe ErrorHandlerModule do
     subject { DummyErrorHandler.new }
 
     it 'raises an expected error' do
+      expect { subject.send(:raise_error, :file_not_found) }.to raise_error(RuntimeError, file_not_found_error)
       expect { subject.send(:raise_error, :invalid_file_name) }.to raise_error(RuntimeError, invalid_file_name_error)
       expect { subject.send(:raise_error, :incorrect_data_format) }.to raise_error(RuntimeError, data_format_error)
       expect { subject.send(:raise_error, :unexpected_arguments) }.to raise_error(RuntimeError, arguments_error)
